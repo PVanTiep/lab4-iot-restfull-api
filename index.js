@@ -27,7 +27,7 @@ app.use(morgan("common"));
 app.use("/v1/data", dataRoute);
 app.use("/v1/device", deviceRoute);
 app.use("/v1/led", ledRoute);
-
-app.listen(8000,()=>{
+const PORT = process.env.PORT || 8000;
+app.listen(PORT,()=>{
     console.log("Server is running...");
 });
